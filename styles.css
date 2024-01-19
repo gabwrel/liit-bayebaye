@@ -62,18 +62,17 @@ main {
     padding-bottom: 10%;
 }
 
-/*Products Section*/
+/* Products Section */
 
 #products {
     text-align: center;
-    padding: 20%;
+    padding: 20px;
 }
 
 .product-cards {
     display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
     justify-content: space-around;
-    flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
-    overflow-x: auto; /* Add horizontal scroll if cards exceed the width */
     padding: 2.5%;
 }
 
@@ -96,6 +95,13 @@ main {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* Additional style for smaller screens */
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
 
 /*Contact Section*/
