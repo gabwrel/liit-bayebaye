@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F5EB;
+
+}
+
+/*Header Section*/
+
+header, main, footer {
+    padding: 20px;
+}
+
+header {
+    background-color: #639578;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Change the color to your desired hover color */
+}
+
+main {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about img {
+    max-width: 100%; /* Set the maximum width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Add border-radius for a rounded appearance */
+    padding-top: 2.5%;
+    padding-bottom: 10%;
+}
+
+/*Products Section*/
+
+#products {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
+    overflow-x: auto; /* Add horizontal scroll if cards exceed the width */
+}
+
+.product-card {
+    width: 30%; /* Adjust the width as needed */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/*Contact Section*/
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.map-container {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 600px;
+}
+
+.contact-details {
+    flex: 1;
+    max-width: 400px;
+}
+
+footer {
+    background-color: #639578;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
