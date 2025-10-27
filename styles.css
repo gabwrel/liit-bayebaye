@@ -1,213 +1,407 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F9F5EB;
-
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f5eb;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-/*Header Section*/
-
-header, main, footer {
-    padding: 20px;
+/* Allow text selection only in input fields and textareas */
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
 
+/* Remove focus outline from non-interactive elements */
+*:not(input):not(textarea):not(button):not(a):not(select):not([tabindex]) {
+  outline: none;
+}
+
+/* Ensure links and buttons can still be focused for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #639578;
+  outline-offset: 2px;
+}
+
+/* HEADER */
 header {
-    background-color: #639578;
-    color: #fff;
-    text-align: left;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #639578;
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .brand {
-    font-size: 1.2em;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ffcc00; /* Change the color to your desired hover color */
+  color: #ffcc00;
 }
 
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Open animation */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #639578;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  nav li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Main */
 main {
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
+  text-align: center;
+  padding: 40px 10%;
 }
-
 #about img {
-    max-width: 75%; /* Set the maximum width to 100% of the container */
-    height: auto; /* Maintain the aspect ratio */
-    padding-top: 6%;
-    padding-bottom: 10%;
+  max-width: 75%;
+  height: auto;
+  padding: 40px 0;
 }
 
-/* Products Section */
-
+/* Products */
 #products {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 40px 20px;
 }
-
 .product-cards {
-    display: flex;
-    justify-content: space-around;
-    padding: 2.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
-
 .product-card {
-    width: 30%; /* Adjust the width as needed */
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
-
 .product-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
 .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
-/* Additional style for larger screens (desktop) */
-@media screen and (min-width: 769px) {
-    .product-cards {
-        flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
-        overflow-x: auto; /* Add horizontal scroll if cards exceed the width */
-    }
+/* STORAGE */
+.storage-section {
+  background: #ffffff85;
+  padding: 40px 20px;
+  border-top: 3px solid #639578;
+  border-bottom: 3px solid #639578;
+  text-align: center;
+}
+.storage-section h1 {
+  color: #639578;
+  font-size: 1.8rem;
+}
+.storage-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.7;
+  color: #333;
 }
 
-/* Additional style for smaller screens */
-@media screen and (max-width: 768px) {
-    .product-card {
-        width: 100%; /* Full width on smaller screens */
-    }
+/* CONTACT */
+.contact-section {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
 }
 
-/*Contact Section*/
+.contact-card {
+  flex: 1 1 380px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
 
-#contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    text-align: left;
+.contact-title {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.contact-row {
+  margin-top: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  flex: 0 0 34px;
+}
+
+.icon-wrap svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-text {
+  color: #0f172a;
+  font-size: 0.98rem;
+}
+
+.link {
+  color: #0b5fff;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.link:hover,
+.icon-wrap a:hover svg {
+  opacity: 0.85;
 }
 
 .map-container {
-    flex: 1;
-    max-width: 600px;
-    margin-right: 20px;
+  flex: 1 1 520px;
 }
 
-.map {
-    width: 100%;
-    height: 600px;
+.map-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
 }
 
-.contact-details {
-    flex: 1;
-    max-width: 400px;
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: 0;
+  display: block;
 }
 
-.contact-details {
-    flex: 1;
-    max-width: 400px;
+/* Responsive adjustments */
+@media (max-width: 880px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .map-wrapper iframe {
+    min-height: 260px;
+  }
 }
 
-.map-container {
-    flex: 1;
-    max-width: 600px;
-    margin-right: 20px;
-}
-
-.map {
-    width: 100%;
-    height: 300px; /* Adjust the height as needed */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* Send Email Section */
-.contact-form {
-    text-align: center;
-    padding: 20px;
-    /* background-color: #f9f9f9; */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%; /* Adjust the width as needed */
-}
-
-.contact-form h2 {
-    color: #639578;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #639578;
-    color: #fff;
-    cursor: pointer;
-    width: 200px;
-}
-
-input[type="submit"]:hover {
-    background-color: #4d724d;
-}
-
+/* FOOTER */
 footer {
-    background-color: #639578;
-    color: #fff;
-    text-align: center;
-    /* position: fixed; */
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
+  background: #639578;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* === FADE-IN ANIMATION === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === STORAGE SECTION === */
+.storage-section {
+  background-color: #ffffff85;
+  padding: 40px 20px;
+  border-top: 3px solid #639578;
+  border-bottom: 3px solid #639578;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.storage-section h1 {
+  color: #639578;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.storage-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.storage-content strong {
+  color: #4d724d;
+}
+
+.storage-content em {
+  color: #777;
+}
+
+@media screen and (max-width: 768px) {
+  .storage-content {
+    padding: 0 10px;
+  }
+}
+
+/* === FADE-IN ANIMATION === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === STORAGE SECTION === */
+.storage-section {
+  background-color: #ffffff85;
+  padding: 40px 20px;
+  border-top: 3px solid #639578;
+  border-bottom: 3px solid #639578;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.storage-section h1 {
+  color: #639578;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.storage-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.storage-content strong {
+  color: #4d724d;
+}
+
+.storage-content em {
+  color: #777;
+}
+
+@media screen and (max-width: 768px) {
+  .storage-content {
+    padding: 0 10px;
+  }
 }

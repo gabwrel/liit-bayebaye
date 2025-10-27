@@ -1,97 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liit's</title>
-    <!-- Link to Poppins font from Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liit's Special Baye-Baye</title>
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
     <header>
-        <div class="brand">Liit's Special Baye-Baye</div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="brand">Liit's Special Baye-Baye</div>
+
+      <nav id="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#storage">Storage</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
     </header>
 
+    <!-- MAIN -->
     <main id="about">
-        <img src="assets/images/main.png" alt="Liit">
-        <p>Welcome to Liit's Special Baye-Baye, a cherished family owned business founded in 1991. Baye-Baye is a famously known delicacy from the town of Pavia in Iloilo, Philippines.
-            Our Baye-Baye is a symphony of flavors, skillfully blending fresh young coconut, toasted pinipig (pounded young rice grains), and sweetness from sugar. What makes us apart
-            is not just its delectable taste but the commitment to preserving the authentic preperation methods that have remained unchanged throughout the years.
-        </p>
+      <img src="assets/images/main.png" alt="Liit's Baye-Baye" />
+      <p>
+        Welcome to Liit's Special Baye-Baye, a cherished family-owned business
+        founded in 1991. Baye-Baye is a famously known delicacy from the town of
+        Pavia in Iloilo, Philippines. Our Baye-Baye is a symphony of flavors,
+        skillfully blending fresh young coconut, toasted pinipig (pounded young
+        rice grains), and sweetness from sugar. What sets us apart is our
+        commitment to preserving the authentic preparation methods that have
+        remained unchanged throughout the years.
+      </p>
     </main>
-    
     <section id="products">
-        <h1>Our Products</h1>
-        <div class="product-cards">
-        <div class="product-card"> 
-            <img src="assets/images/rolls_image.jpg" alt="Rolls">
-            <h3>Rolls</h3>
-            <p>Indulge in our individually wrapped delightful rolls, crafted with precision and love. A perfect treat for any occasion.</p>
+      <h1>Our Products</h1>
+      <div class="product-cards">
+        <!-- Rolls (Regular + Big) -->
+        <div class="product-card fade-in">
+          <img src="assets/images/rolls_image.jpg" alt="Rolls" />
+          <h3>Rolls — ₱12 each / Big Rolls — ₱24 each</h3>
+          <p>
+            Individually rolled and neatly wrapped for freshness. Perfect for
+            quick snacks, pasalubong, or giveaways. We also offer a
+            <strong>bigger size (₱24 each)</strong> made to order — double the
+            delight with the same authentic Baye-Baye flavor.
+          </p>
         </div>
-        <div class="product-card"> 
-            <img src="assets/images/boxes_image.jpg" alt="Boxes">
-            <h3>Box</h3>
-            <p>Discover the joy of our meticulously prepared boxes, each containing fifty pieces to delight your senses.</p>
+
+        <!-- Box -->
+        <div class="product-card fade-in">
+          <img src="assets/images/boxes_image.jpg" alt="Boxes" />
+          <h3>Box — ₱600 (50 rolls)</h3>
+          <p>
+            Perfect for sharing or events! Each box includes 50 regular rolls.
+            Optional <strong>₱15 carton box upgrade</strong> available for gifts
+            and pasalubong.
+          </p>
         </div>
-        <div class="product-card">
-            <img src="assets/images/plates_image.jpg" alt="Plates">
-            <h3>Plate</h3>
-            <p>Experience the rich flavors of Baye-Baye served on plates, perfect for sharing with loved ones.</p>
+
+        <!-- Plate -->
+        <div class="product-card fade-in">
+          <img src="assets/images/plates_image.jpg" alt="Plates" />
+          <h3>Plate — ₱350 (½ kilo)</h3>
+          <p>
+            Enjoy our soft and flavorful Baye-Baye by the half-kilo — ideal for
+            family gatherings, celebrations, or merienda with friends.
+          </p>
         </div>
-    </div>
+      </div>
     </section>
 
+    <!-- Storage & Handling Section -->
+    <section id="storage" class="storage-section fade-in">
+      <h1>Storage & Handling</h1>
+      <div class="storage-content">
+        <p>
+          ❄️ For customers travelling far, we recommend
+          <strong>freezing the Baye-Baye overnight</strong> before your trip.
+          For best results, keep it <strong>frozen for 2 days</strong> to
+          maintain its freshness. Avoid direct heat ☀️ and sunlight during
+          travel as this delicacy is made with <strong>fresh coconut</strong>.
+          It’s best to <strong>hand-carry</strong> your Baye-Baye to prevent it
+          from breaking or spoiling.
+        </p>
 
+        <p>
+          🧊 To keep its authentic taste and texture, store Baye-Baye in the
+          <strong>freezer</strong>. You can enjoy it
+          <strong>straight from the freezer</strong> or let it thaw for about
+          <strong>5 minutes</strong> before eating. Do not heat or microwave as
+          it may change the flavor and texture.
+        </p>
 
-    <section id="contact">
-        <div class="contact-details">
-            <h1>Order Now</h1>
-            <p>Email: liitsbayebaye@email.com</p>
-            <p>Phone Number: +639617972089 / +639987512803</p>
-            <p>Telephone: +63(033)329-7184</p>
-        </div>
-        <div class="map-container">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.487716196682!2d122.53942817377484!3d10.77390835924276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee353edccb221%3A0x535295ef47dd7d00!2sLiit%20Special%20Baye-Baye!5e0!3m2!1sen!2sph!4v1705666188690!5m2!1sen!2sph" width="550" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+        <p>
+          🍨 <strong>Pro Tip:</strong> Try something new — gently smash the
+          Baye-Baye and <strong>fry it for a toasted twist</strong>, or even
+          coat it with breading and top it with
+          <strong>vanilla ice cream</strong> for a fun dessert idea!
+        </p>
+
+        <p>
+          📦 When stored properly, Baye-Baye can last up to
+          <strong>2 months in the freezer</strong>
+          while keeping its delightful taste.
+        </p>
+      </div>
     </section>
 
-    <div class="contact-form">
-        <h2>Send us an email</h2>
-        <form action="mailto:your@email.com" method="post" enctype="text/plain">
-            <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-    
-            <div class="form-group">
-                <input type="submit" value="Send Email">
-            </div>
-        </form>
-    </div>
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="contact-card">
+        <h2 class="contact-title">Order Now</h2>
 
-    <footer>
-        &copy; 2024 Liit's Special Baye-Baye. All rights reserved.
-    </footer>
-</body>
+        <div class="contact-row">
+          <div class="contact-item">
+            <span class="icon-wrap">
+              <a
+                href="https://www.facebook.com/profile.php?id=61567970552488"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.08 5.66 21.19 10.44 22v-7.02H8.08v-2.9h2.36V9.77c0-2.34 1.4-3.63 3.55-3.63 1.03 0 2.1.18 2.1.18v2.31h-1.18c-1.16 0-1.52.72-1.52 1.45v1.76h2.59l-.41 2.9h-2.18V22C18.34 21.19 22 17.08 22 12.07z"
+                  />
+                </svg>
+              </a>
+            </span>
+            <span class="contact-text">
+              Facebook:
+              <a
+                href="https://www.facebook.com/profile.php?id=61567970552488"
+                target="_blank"
+                class="link"
+                >Liit's Special Baye-Baye</a
+              >
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-item">
+            <span class="icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 01.95-.27 11.72 11.72 0 003.66.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.6 3.66 1 1 0 01-.27.95l-2.21 2.18z"
+                />
+              </svg>
+            </span>
+            <span class="contact-text">
+              Phone:
+              <a class="link" href="tel:+639483141146">+63 948 314 1146</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-item">
+            <span class="icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M20 15.5a3 3 0 00-3-3H7a3 3 0 00-3 3V18a2 2 0 002 2h12a2 2 0 002-2v-2.5zM7 7h10a1 1 0 011 1v2H6V8a1 1 0 011-1zM12 3a3 3 0 00-3 3v1h6V6a3 3 0 00-3-3z"
+                />
+              </svg>
+            </span>
+            <span class="contact-text">
+              Telephone:
+              <a class="link" href="tel:+63333297184">+63 (033) 329-7184</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.487716196682!2d122.53942817377484!3d10.77390835924276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee353edccb221%3A0x535295ef47dd7d00!2sLiit%20Special%20Baye-Baye!5e0!3m2!1sen!2sph!4v1705666188690!5m2!1sen!2sph"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>&copy; 2024 Liit's Special Baye-Baye. All rights reserved.</footer>
+
+    <!-- Smooth Scroll + Mobile Menu -->
+    <script>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .querySelector(this.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+
+          // Close mobile menu after click
+          document.getElementById("navbar").classList.remove("active");
+          document.getElementById("menu-toggle").classList.remove("open");
+        });
+      });
+
+      // Hamburger menu
+      const menuToggle = document.getElementById("menu-toggle");
+      const navbar = document.getElementById("navbar");
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("open");
+        navbar.classList.toggle("active");
+      });
+
+      // Fade-in effect when scrolling
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      const appearOnScroll = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      fadeElements.forEach((el) => appearOnScroll.observe(el));
+    </script>
+  </body>
 </html>
