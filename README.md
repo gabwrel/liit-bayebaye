@@ -16,7 +16,7 @@ A modern and responsive web application created to showcase and promote Liit Bay
 🛠 Tech Stack
 Frontend
 HTML
-Tailwind CSS
+Vanilla CSS
 Deployment
 Vercel
 📸 Preview
