@@ -15,10 +15,8 @@ A modern and responsive web application created to showcase and promote Liit Bay
 🌐 Fast deployment and accessibility via Vercel
 🛠 Tech Stack
 Frontend
-Next.js
-React.js
+HTML
 Tailwind CSS
-TypeScript
 Deployment
 Vercel
 📸 Preview
